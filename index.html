@@ -37,7 +37,14 @@
   </p>
 
   <p class="text-center">
-    📅 Fecha de hoy: <span id="fecha"></span>
+    📅 Fecha de hoy: <input type="date" id="fechaActual" name="fecha">
+
+<script>
+    // Obtener fecha actual en formato YYYY-MM-DD
+    const hoy = new Date().toISOString().split('T')[0];
+    // Asignar al input
+    document.getElementById('fechaActual').value = hoy;
+</script>
   </p>
 
   <div class="text-center mt-3">
